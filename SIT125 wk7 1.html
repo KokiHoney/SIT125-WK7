@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title></title>
+<script src="vue.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+    <p>Start</p>
+    <div id="hello">
+        <one></one>
+    </div>
+    <p>End</p>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        Vue.component('one', { template: '<p>Hello</p>' })
+        new Vue({
+            el: '#hello'
+        });
+    </script>

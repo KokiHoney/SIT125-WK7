@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .panel{
+            border: 1px solid #ececec;
+        }
+        .panel>*{
+            padding:10px;
+        }
+        .title{
+            border-bottom: 1px solid #ececec;
+        }
+        .content{
+            border-bottom: 1px solid #ececec;
+        }
+        .footer{
+ 
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+    <panel>
+        <div slot="title">Hello Word</div>
+        <div slot="content">
+            Hello
+            Word
+        </div>
+        <div slot="footer">Hi</div>
+    </panel>
+</div>
+ 
+<template id="panel-tpl">
+    <div class="panel">
+        <div class="title">
+            <slot name="title"></slot>
+        </div>
+        <div class="content">
+            <slot name="content"></slot>
+        </div>
+        <div class="footer">
+            <slot name="footer"></slot>
+        </div>
+    </div>
+</template>
+<script src="../lib/vue.js"></script>
+<script src="./js/main.js"></script>
+</body>
+</html>
